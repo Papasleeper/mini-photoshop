@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1271</width>
+    <height>846</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>30</y>
+      <width>211</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="gray_btn">
+       <property name="text">
+        <string> To Gray </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="invert_btn">
+       <property name="text">
+        <string>Invert Image Colour</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="histoeq_btn">
+       <property name="text">
+        <string>Histogram Equalization</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="gaunoise_btn">
+       <property name="text">
+        <string>Gaussian Noise</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="boxfil_btn">
+       <property name="text">
+        <string>Box Filter</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="gaufil_btn">
+       <property name="text">
+        <string>Gaussian Filter</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saltAndPep_btn">
+       <property name="text">
+        <string>Salt and pepper</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Sharpen_btn">
+       <property name="text">
+        <string>Sharpen</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="edgeDetection_btn">
+       <property name="text">
+        <string>edge detection</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="median_btn">
+       <property name="text">
+        <string>Median Filter</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="gv_img">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>791</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>120</y>
+      <width>46</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+     <property name="leftMargin">
+      <number>5</number>
+     </property>
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="crop_btn">
+       <property name="statusTip">
+        <string>Crop</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/crop.png</normaloff>img/crop.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="L_rotate_btn">
+       <property name="statusTip">
+        <string>Left Rotate</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/rotate_90_degrees_Lccw.png</normaloff>img/rotate_90_degrees_Lccw.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="R_rotate_btn">
+       <property name="statusTip">
+        <string>Right Rotate</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/rotate_90_degrees_Rccw.png</normaloff>img/rotate_90_degrees_Rccw.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="hori_flip_btn">
+       <property name="statusTip">
+        <string>Horizontal Flip</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/flip hori.png</normaloff>img/flip hori.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="verti_flip_btn">
+       <property name="statusTip">
+        <string>Vertical Flip</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/flip verti.png</normaloff>img/flip verti.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="zoom_in_btn">
+       <property name="statusTip">
+        <string>Zoom In</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/zoom in.png</normaloff>img/zoom in.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="zoom_out_btn">
+       <property name="statusTip">
+        <string>Zoom Out</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>img/zoom out.png</normaloff>img/zoom out.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="bg_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>1271</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>img/solid-color-image (3).jpeg</pixmap>
+    </property>
+    <property name="margin">
+     <number>-2</number>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>30</y>
+      <width>191</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QGraphicsView" name="gv_r"/>
+     </item>
+     <item>
+      <widget class="QGraphicsView" name="gv_g"/>
+     </item>
+     <item>
+      <widget class="QGraphicsView" name="gv_b"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="bg_2">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>15</y>
+      <width>451</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>img/solid-color-image (4).jpeg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bg_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>791</width>
+      <height>631</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>img/solid-color-image (5).jpeg</pixmap>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>510</y>
+      <width>311</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QSlider" name="con_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="brigth_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="hue_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="saturation_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="value_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="R_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="G_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="B_bar">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>520</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Contrast</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bright">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>560</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Brightness</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>590</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hue</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saturation">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>630</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Saturation</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>660</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Value</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_btn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>720</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_btn">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>720</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_btn">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>700</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Blabel">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>770</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>    B</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Glabel">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>740</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>    G    </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Rlabel">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>700</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>    R</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Subtract_btn">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>770</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Subtract</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Add_btn">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>720</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Blend_btn">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>770</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Blend</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Weight_bar">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>780</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>780</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Weight</string>
+    </property>
+   </widget>
+   <zorder>bg_1</zorder>
+   <zorder>bg_2</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>formLayoutWidget</zorder>
+   <zorder>verticalLayoutWidget_2</zorder>
+   <zorder>bg_3</zorder>
+   <zorder>gv_img</zorder>
+   <zorder>verticalLayoutWidget_3</zorder>
+   <zorder>label</zorder>
+   <zorder>bright</zorder>
+   <zorder>label_3</zorder>
+   <zorder>saturation</zorder>
+   <zorder>label_5</zorder>
+   <zorder>open_btn</zorder>
+   <zorder>save_btn</zorder>
+   <zorder>reset_btn</zorder>
+   <zorder>Blabel</zorder>
+   <zorder>Glabel</zorder>
+   <zorder>Rlabel</zorder>
+   <zorder>Subtract_btn</zorder>
+   <zorder>Add_btn</zorder>
+   <zorder>Blend_btn</zorder>
+   <zorder>Weight_bar</zorder>
+   <zorder>label_2</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>crop_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>816</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>792</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>L_rotate_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>815</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>776</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>R_rotate_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>816</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>784</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hori_flip_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>821</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>788</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verti_flip_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>818</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_in_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>817</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoom_out_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>818</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>762</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gv_r</sender>
+   <signal>rubberBandChanged(QRect,QPointF,QPointF)</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>872</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>779</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gv_g</sender>
+   <signal>rubberBandChanged(QRect,QPointF,QPointF)</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>873</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gv_b</sender>
+   <signal>rubberBandChanged(QRect,QPointF,QPointF)</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>939</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>741</x>
+     <y>450</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gray_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1084</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>723</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>invert_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1091</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>719</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>histoeq_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1087</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>695</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gaunoise_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1131</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>721</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boxfil_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1090</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>736</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gaufil_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1094</x>
+     <y>388</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>699</x>
+     <y>395</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>median_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1170</x>
+     <y>458</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>450</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>con_bar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gv_img</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>540</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>751</x>
+     <y>548</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>brigth_bar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gv_img</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>986</x>
+     <y>603</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hue_bar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gv_img</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>960</x>
+     <y>654</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>751</x>
+     <y>637</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saturation_bar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gv_img</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1015</x>
+     <y>715</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>771</x>
+     <y>637</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>value_bar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>gv_img</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>974</x>
+     <y>763</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>668</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>open_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>725</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>630</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>730</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>reset_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>gv_img</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>704</x>
+     <y>732</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>712</x>
+     <y>580</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
